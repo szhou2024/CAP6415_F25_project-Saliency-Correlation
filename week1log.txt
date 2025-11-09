@@ -1,7 +1,8 @@
-Began exploring saliency datasets and formulating ways to conduct experiments.
-Specifically, the datasets in consideration are the standard CAT2000 and MIT300:
+Began exploring saliency datasets and formulating ways to conduct experiments.Specifically, the datasets in consideration are the standard CAT2000 and MIT300:
 http://saliency.mit.edu/results_cat2000.html
 
 Took a look at the original dataset, including what types of images (20 scenes), resolution (1080p), and test train split (2000 each). Paper below:
 https://arxiv.org/pdf/1505.03581
 
+Took a look at the Torralba paper to understand CAM process for saliency:
+https://arxiv.org/pdf/1512.04150
