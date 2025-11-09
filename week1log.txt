@@ -9,3 +9,6 @@ https://arxiv.org/pdf/1512.04150
 
 Used paper below to compare with the above paper to explore and weigh various alternative CAM methods with results:
 https://openaccess.thecvf.com/content/ICCV2021/papers/Jung_Towards_Better_Explanations_of_Class_Activation_Mapping_ICCV_2021_paper.pdf
+
+Need to explore the following a bit later, especially when considering tradeoffs of saliency map accuracy: 
+"The new prefered way of evaluating models is via the submission of probabilistic models predicting fixation densities. From those densities, metric-specific saliency maps can be derived which make model evaluation much more consistent. In nearly all cases, models perform better than with the classic evaluation since penalties due to saliency maps not matching the metrics are removed."
