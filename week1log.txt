@@ -7,6 +7,9 @@ https://arxiv.org/pdf/1505.03581
 Took a look at the Torralba paper to understand CAM process for saliency:
 https://arxiv.org/pdf/1512.04150
 
+Read this very useful medium article, will definitely implement some of these when doing the project
+https://medium.com/@faheemgurkani/exploring-class-activation-maps-cam-unveiling-the-decision-making-process-of-cnns-fb9de759880e
+
 Used paper below to compare with the above paper to explore and weigh various alternative CAM methods with results:
 https://openaccess.thecvf.com/content/ICCV2021/papers/Jung_Towards_Better_Explanations_of_Class_Activation_Mapping_ICCV_2021_paper.pdf
 
