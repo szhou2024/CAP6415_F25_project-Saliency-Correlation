@@ -1,1 +1,4 @@
+Began exploring saliency datasets and formulating ways to conduct experiments.
+Specifically, the datasets in consideration are the standard CAT2000 and MIT300:
+http://saliency.mit.edu/results_cat2000.html
 
