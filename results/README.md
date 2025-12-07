@@ -10,6 +10,6 @@
 
 ##### Top and bottom 25 correlated images are shown in folders individually. For some brief summary explanations click here:
 1. [Similarities](./YOUR_FILE.md#similarities)
-2. [Differences](./Bottom%2025%20Correlated/README.md#differences)
+2. [Differences](./Bottom%2025%20Correlated/#differences)
 
 #####  For 
