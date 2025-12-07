@@ -55,7 +55,9 @@ Some notable things:
    * Resize all spatial dimensions to match (default using fasterrcnn_reshape_transform is pool layer dimensions)
    * Conduct PCA as EigenCAM would on all channels in this layer
      
-* The model itself (FasterRCNN + FPNs) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as we are simply using the backbone and not propogating the model forward past FPNs.
+* The model itself (FasterRCNN + FPNs) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as I am simply using the backbone and not propogating the model forward past FPNs
+* Ground truth saliency maps apply a gaussian blur of σ~19. I do the same to initial EigenCAM output, and in the notebook, it will be referred to as "smoothed CAM"
+* Standard correlation metric (used in papers/benchmarks) inflate correlation because 0's are being processed as not null values, but 0's itself. This renders intersection masking that standard libraries have useless. Instead, I apply a cc_mask, which is correlation based on union mask, but 0's are counted as nulls instead of 0.
 
 ## Results
 For a more detailed look at the results, click below to navigate to it:
@@ -65,7 +67,7 @@ For a more detailed look at the results, click below to navigate to it:
 TLDR: Results generally reflect model backbone training bias (imagenet datasets). Results also show that 
 
 ## Acknowledgements
-* Jacob Gil for his popular EigenCAM for YOLO5 notebook. This project notebook is based heavily this framework, with some adjustments. Link the notebook below:
+* Jacob Gil for his popular EigenCAM for YOLO5 notebook. Implementation of this project is based heavily this framework, with some adjustments. Link the notebook below:
 
 [https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb)
 
