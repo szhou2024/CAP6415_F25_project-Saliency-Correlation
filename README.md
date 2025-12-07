@@ -49,9 +49,11 @@ The resulting saliency map is compared to ground truth human saliency maps on th
 
 Some notable things:
 * Normally, with grad-cam library, you would pass a list of layers to hook onto and produce averaged CAMs across the layers. Unfortunately, FPNs are not easy to hook in PyTorch, so the workaround is the following:
+  
    * Flatten all 5 FPN layers into 1 giant "layer"
    * Resize all spatial dimensions to match (default using fasterrcnn_reshape_transform is pool layer dimensions)
    * Conduct PCA as EigenCAM would on all channels in this layer
+     
 * The model itself (FasterRCNN) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as we are simply using the backbone and not propogating the model forward past FPNs
 
 ## Results
