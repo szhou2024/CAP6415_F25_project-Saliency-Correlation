@@ -25,6 +25,7 @@ For all with ⬇️ download image, you can just right click save as link for ea
 7. Run entire notebook
 
 ## Requirements
+Python 3.9.6 utilized in the project, but no issues running on versions after this. 
 See requirements.txt in repository if you want to use that, but notebook has a !pip section that will install the requirements and versions.
 
 ## Usage 
