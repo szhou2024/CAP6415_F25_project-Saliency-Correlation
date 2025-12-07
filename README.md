@@ -64,9 +64,12 @@ For a more detailed look at the results, click below to navigate to it:
 TLDR: Results generally reflect model backbone training bias (imagenet datasets). Results also show that 
 
 ## Acknowledgements
-The notebook is based heavily on Jacob Gil's popular EigenCAM for YOLO5 notebook. Link the notebook below:
+* Jacob Gil for his popular EigenCAM for YOLO5 notebook. This project notebook is based heavily this framework, with some adjustments. Link the notebook below:
 
-[Ground Truth Saliency Maps](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb)
+[Ehttps://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb)
+
+* SALICON dataset providers
+* Jacob Gil for his popular grad-cam Python library. While documentation is not the most intuitive, the library itself is incredibly flexible and powerful. 
 
 ## References/Sources
 abc
