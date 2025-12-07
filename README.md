@@ -66,10 +66,12 @@ TLDR: Results generally reflect model backbone training bias (imagenet datasets)
 ## Acknowledgements
 * Jacob Gil for his popular EigenCAM for YOLO5 notebook. This project notebook is based heavily this framework, with some adjustments. Link the notebook below:
 
-[Ehttps://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb)
+[https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb)
 
 * SALICON dataset providers
-* Jacob Gil for his popular grad-cam Python library. While documentation is not the most intuitive, the library itself is incredibly flexible and powerful. 
+* Jacob Gil again for his popular grad-cam Python library. While documentation is not the most intuitive, the library itself is incredibly flexible and powerful. Link to library below:
+
+[https://github.com/jacobgil/pytorch-grad-cam/blob/master/pytorch_grad_cam/eigen_cam.py](https://github.com/jacobgil/pytorch-grad-cam/blob/master/pytorch_grad_cam/eigen_cam.py)
 
 ## References/Sources
 abc
