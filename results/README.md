@@ -8,8 +8,9 @@
 3. Set recovery_mode = True
 4. Run all
 
-##### Top and bottom 25 correlated images are shown in folders individually. For some brief summary explanations click here:
+##### Top and bottom 25 correlated images are shown in folders individually. For some brief summary explanations click below:
 1. [Similarities](./Top%2025%20Correlated#similarities)
 2. [Differences](./Bottom%2025%20Correlated#differences)
 
-#####  For 
+##### For an explanation of what I did to explore more into Bottom 25 correlations, click below:
+[Explanations](./Deep%20Dive%20on%20Bottom%2025#explanation)
