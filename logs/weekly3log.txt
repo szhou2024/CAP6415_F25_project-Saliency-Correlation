@@ -1,0 +1,25 @@
+Looked more into FasterRCNN + EigenCAM:
+https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb
+
+I'm a bit on the fence about the backbone, it seems EXTREMELY complicated. Seems virtually perfect for the purposes of what I want to explore, but implementation looks to be a nightmare.
+
+Took a DEEP look (and I mean REALLY deep) into the underlying EigenCAM library to understand what's going on. Fairly intuitive actually, I think I can work with this no problem.
+
+FasterRCNN is a whole other issue. First time learning about FPNs, and they are a very nice tool, but plenty of potential issues I can envision off the bat for saliency map generation. I now understand what the author mentions about layer hooking issues.
+
+These 3 sources help me understand alot about FPNs and FasterRCNNs:
+
+Original paper on FPNs: https://arxiv.org/pdf/1612.03144
+Excellent explanation on FPNs: https://naokishibuya.github.io/blog/2022-08-21-fpn-2016/
+Original paper on FasterRCNNs: https://arxiv.org/pdf/1506.01497
+
+Not 100% sure on the implementation, but seems promising enough so I'm going to go with FasterRCNN + EigenCAM. This has no sequential processing of any capacity, so I already expect low correlation.
+
+Decided to use Jacob Gil's EigenCAM for YOLO5 notebook as a base point. Implemented and ran the entire analysis on a few image on SALICON. I can think of some ways to improve the analysis, going to implement later.
+
+Decided to not initially implement box detection (this is the entire premise of FPN use). Perhaps if I have time, I'll compare correlations of most salient object boxes with ground truths.
+
+Traditionally, we would deploy EigenCAM on a final convolution layer.  I have that option here, but I'm making my main layers the entire model.backbone, as specified in Jacob's notebook. If I have enough time, I will hook and compare EigenCAM on just the final layer of ResNET. The issue with this is it's likely to be object-level feature representations, which are clearly geared towards object detection/recognition. In a "first impression" or "quick gaze," there's not enough time to process objects.
+
+Digged deeper into something similar to fasterRCNN: MaskRCNN. Read the paper quickly by same co-author of fasterRCNN (Girshick),
+https://arxiv.org/pdf/1703.06870, and determining that this more geared towards object segmentation and less relevant to saliency representation.
