@@ -1,5 +1,5 @@
 # CAP6415_F25_project-Saliency-Correlation
-Large-scale receptive field to saliency correlation study. [Click here to go to Preface section](/#Preface)
+Large-scale receptive field to saliency correlation study. [Click here to go to Preface section](./#Preface)
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
 For all with ⬇️ download image, you can just right click save as link for ease. Otherwise, just click to be directed to that link.
 
