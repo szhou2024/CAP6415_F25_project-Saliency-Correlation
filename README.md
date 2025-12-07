@@ -86,9 +86,15 @@ To summarize:
 
 * Simonyan, K., Vedaldi, A., & Zisserman, A. (2013). Deep inside convolutional networks: Visualising image classification models and saliency maps. arXiv. https://arxiv.org/abs/1312.6034
 
-* Li, X., Zhao, L., Wei, L., Yang, M.-H., Wu, F., Zhuang, Y., Ling, H., & Wang, J. (2015). DeepSaliency: Multi-Task Deep Neural Network Model for Salient Object Detection. arXiv. https://arxiv.org/abs/1506.01497
+* Girshick, R. (2015). Fast R-CNN. arXiv. https://arxiv.org/abs/1504.08083
 
-* Girshick, R. (2015). Fast R-CNN. arXiv. https://arxiv.org/abs/1504.08083 
+* Ren, S., He, K., Girshick, R., & Sun, J. (2016). Faster R-CNN: Towards real-time object detection with region proposal networks (arXiv preprint arXiv:1506.01497). https://arxiv.org/abs/1506.01497
+
+* Lin, T.-Y., Dollár, P., Girshick, R., He, K., Hariharan, B., & Belongie, S. (2016). Feature Pyramid Networks for Object Detection. arXiv preprint arXiv:1612.03144. https://arxiv.org/abs/1612.03144
+
+* Shibuya, N. (2022, August 21). FPN: Feature Pyramid Network (2016). Naoki Shibuya. https://naokishibuya.github.io/blog/2022-08-21-fpn-2016/
+
+* Molnar, C. (2025). Interpretable Machine Learning: A Guide for Making Black Box Models Explainable (3rd ed.). Retrieved from https://christophm.github.io/interpretable-ml-book/
 
 ## License
 This project is purely for academic purposes as part of CAP6415 coursework requirement.
