@@ -2,7 +2,7 @@
 Large-scale receptive field to saliency correlation study
 
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
-For all with download image, you can just right click save as link for ease.
+For all with ⬇️ download image, you can just right click save as link for ease. Otherwise, just click to be directed to that link.
 
 ### (Recommended) If you DON'T want to manually process all 5000 images from scratch:
 1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
@@ -17,7 +17,7 @@ For all with download image, you can just right click save as link for ease.
    
   [⬇️Images](https://s3.amazonaws.com/salicon-dataset/2015r1/val.zip)
 
-  [⬇️Ground Truth Saliency Maps](https://drive.google.com/a/umn.edu/uc?id=1PnO7szbdub1559LfjYHMy65EDC4VhJC8&export=download)
+  [Ground Truth Saliency Maps](https://drive.google.com/a/umn.edu/uc?id=1PnO7szbdub1559LfjYHMy65EDC4VhJC8&export=download)
 
 3. For Images, extract entire val folder locally to a directory.
 4. In the notebook, change path_to_images variable to that directory.
