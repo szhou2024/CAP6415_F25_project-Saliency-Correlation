@@ -18,9 +18,9 @@ Large-scale receptive field to saliency correlation study
 
   [Ground Truth Saliency Maps](https://drive.google.com/a/umn.edu/uc?id=1PnO7szbdub1559LfjYHMy65EDC4VhJC8&export=download)
 
-3. For images, extract entire val folder locally to a directory.
+3. For Images, extract entire val folder locally to a directory.
 4. In the notebook, change path_to_images variable to that directory.
-5. For ground truths, extract just the val folder locally to a directory.
+5. For Ground Truths, extract just the val folder locally to a directory.
 6. In the notebook, change path_to_maps variable to that directory.
 7. Run entire notebook
 
