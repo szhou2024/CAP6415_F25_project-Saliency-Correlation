@@ -2,6 +2,7 @@
 Large-scale receptive field to saliency correlation study
 
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
+For all with download image, you can just right click save as link for ease.
 
 ### (Recommended) If you DON'T want to manually process all 5000 images from scratch:
 1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
