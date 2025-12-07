@@ -54,7 +54,7 @@ Some notable things:
    * Resize all spatial dimensions to match (default using fasterrcnn_reshape_transform is pool layer dimensions)
    * Conduct PCA as EigenCAM would on all channels in this layer
      
-* The model itself (FasterRCNN) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as we are simply using the backbone and not propogating the model forward past FPNs
+* The model itself (FasterRCNN + FPNs) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as we are simply using the backbone and not propogating the model forward past FPNs.
 
 ## Results
 For a more detailed look at the results, click below to navigate to it:
@@ -64,7 +64,9 @@ For a more detailed look at the results, click below to navigate to it:
 TLDR: Results generally reflect model backbone training bias (imagenet datasets). Results also show that 
 
 ## Acknowledgements
-abc
+The notebook is based heavily on Jacob Gil's popular EigenCAM for YOLO5 notebook. Link the notebook below:
+
+[Ground Truth Saliency Maps](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb)
 
 ## References/Sources
 abc
