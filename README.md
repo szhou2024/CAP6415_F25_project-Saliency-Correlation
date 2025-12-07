@@ -16,7 +16,7 @@ For all with ⬇️ download image, you can just right click save as link for ea
    
   [⬇️SALICON Source Images](https://s3.amazonaws.com/salicon-dataset/2015r1/val.zip)
 
-  [Ground Truth Saliency Maps](https://drive.google.com/a/umn.edu/uc?id=1PnO7szbdub1559LfjYHMy65EDC4VhJC8&export=download)
+  [Ground Truth Saliency Maps](https://drive.usercontent.google.com/download?id=1YWiwRNHokV2TIUBsNhAeRo1aqz8Iq0In&export=download&authuser=0)
 
 3. For Images, extract entire val folder locally to a directory.
 4. In the notebook, change path_to_images variable to that directory.
