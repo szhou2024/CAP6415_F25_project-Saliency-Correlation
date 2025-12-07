@@ -2,7 +2,8 @@
 Large-scale receptive field to saliency correlation study. [Click here to go to Preface section](./#Preface)
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
 For all with ⬇️ download image, you can just right click save as link for ease. Otherwise, just click to be directed to that link.
-
+______
+______
 ### (Recommended) If you DON'T want to manually process all 5000 images from scratch:
 1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
 2. Download backup.npy in results subfolder. Link provided here for ease: [⬇️backup](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/results/backup.npy)
@@ -23,11 +24,13 @@ For all with ⬇️ download image, you can just right click save as link for ea
 5. For Ground Truths, extract just the val folder locally to a directory.
 6. In the notebook, change path_to_maps variable to that directory.
 7. Run entire notebook
-
+______
+______
 ## Requirements
 Python 3.9.6 utilized in the project, but no issues running on versions after this. 
 See requirements.txt in repository if you want to use that, but notebook has a !pip section that will install the requirements and versions.
-
+______
+______
 ## Usage 
 Recommended way to recreate results file is to simply follow the first section of setup instructions above (uses backup.npy).
 If you want to recreate the entire forward pass process, follow the second section of setup instructions above.
@@ -37,10 +40,12 @@ After you're done setting up, simply run the entire notebook.
 Many SOTA models have come out to predict human fixation/saliency, including the ever popular DeepGaze models. These models combine image processing with fixation sequencing to come out with predictions that do quite a good job on benchmark datasets.
 
 However, instead of a "Deep Gaze," I would like to explore a framework that can similuate a "quick gaze" and compare saliency that way. There are inherent flaws in both methodology and comparison of "quick gaze" to ground truth human fixation/saliency maps. Nevertheless, I believe it will be interesting to explore.
-
+______
+______
 ## Abstract
 The goal of this project is to compare similarities and differences between CAM generated saliency maps versus SALICON human saliency maps. To represent the aforementioned "quick gaze," I decided to implement quick  
-
+______
+______
 ## Methodology/Pipeline
 As described above, this project produces saliency maps by combining FasterRCNN + FPNs with EigenCAM to generate saliency maps. Pipeline for image processing is below:
 
@@ -58,7 +63,8 @@ Some notable things:
 * The model itself (FasterRCNN + FPNs) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as I am simply using the backbone and not propogating the model forward past FPNs
 * Ground truth saliency maps apply a gaussian blur of σ~19. I do the same to initial EigenCAM output, and in the notebook, it will be referred to as "smoothed CAM"
 * Standard correlation metric (used in papers/benchmarks) inflate correlation because 0's are being processed as not null values, but 0's itself. This renders intersection masking that standard libraries have useless. Instead, I apply a cc_mask, which is correlation based on union mask, but 0's are counted as nulls instead of 0.
-
+______
+______
 ## Results
 For a more detailed look at the results, click below to navigate to it:
 
@@ -70,7 +76,8 @@ To summarize:
 * Maps on high texture and multiple different object classes tend to be negatively correlated with ground truths.
 * The standard text bias is not present in CAMs, but is present in ground truths.
 * Human bias is not 
-
+______
+______
 ## Acknowledgements
 * Jacob Gil for his popular EigenCAM for YOLO5 notebook. Implementation of this project is based heavily this framework, with some adjustments. Link the notebook below:
 
@@ -80,7 +87,8 @@ To summarize:
 * Jacob Gil again for his popular grad-cam Python library. While documentation is not the most intuitive, the library itself is incredibly flexible and powerful. Link to library below:
 
 [https://github.com/jacobgil/pytorch-grad-cam/blob/master/pytorch_grad_cam/eigen_cam.py](https://github.com/jacobgil/pytorch-grad-cam/blob/master/pytorch_grad_cam/eigen_cam.py)
-
+______
+______
 ## References/Sources
 * Muhammad, M. B., & Yeasin, M. (2020). Eigen-CAM: Class Activation Map using Principal Components. arXiv. https://arxiv.org/abs/2008.00299
 
@@ -95,6 +103,7 @@ To summarize:
 * Shibuya, N. (2022, August 21). FPN: Feature Pyramid Network (2016). Naoki Shibuya. https://naokishibuya.github.io/blog/2022-08-21-fpn-2016/
 
 * Molnar, C. (2025). Interpretable Machine Learning: A Guide for Making Black Box Models Explainable (3rd ed.). Retrieved from https://christophm.github.io/interpretable-ml-book/
-
+______
+______
 ## License
 This project is purely for academic purposes as part of CAP6415 coursework requirement.
