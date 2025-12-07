@@ -1,0 +1,3 @@
+### Avg CC by decile file shows overall correlation is virtually 0 across all 5000 images. This is to be expected. 
+
+### backup.npy is the numpy array results of saliency metrics for all 5000 images after forward pass.
