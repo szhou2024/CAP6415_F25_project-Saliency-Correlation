@@ -4,7 +4,7 @@ Large-scale receptive field to saliency correlation study
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
 
 ### (Recommended) If you DON'T want to manually process all 5000 images from scratch:
-1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb?raw=1)
+1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
 2. Download backup.npy in results subfolder. Link provided here for ease: [⬇️backup](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/results/backup.npy)
 3. In the notebook, change save_path variable to where you downloaded to '.../your_path/backup.npy'
 4. In the notebook, set recovery_mode = True
