@@ -1,5 +1,5 @@
 # CAP6415_F25_project-Saliency-Correlation
-Large-scale receptive field to saliency correlation study. [Click here to go to Preface section](./#Preface)
+Large-scale receptive field to saliency correlation study. [Click here to go to Preface section](/#Preface)
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
 For all with ⬇️ download image, you can just right click save as link for ease. Otherwise, just click to be directed to that link.
 
@@ -35,10 +35,10 @@ After you're done setting up, simply run the entire notebook.
 ## Preface
 Many SOTA models have come out to predict human fixation/saliency, including the ever popular DeepGaze models. These models combine image processing with fixation sequencing to come out with predictions that do quite a good job on benchmark datasets.
 
-However, instead of a "Deep Gaze," I would like to explore a framework that can similuate a "quick gaze" and compare saliency that way. There are inherent flaws in both methodology and comparison of "quick gaze" to ground truth human fixation/saliency maps.
+However, instead of a "Deep Gaze," I would like to explore a framework that can similuate a "quick gaze" and compare saliency that way. There are inherent flaws in both methodology and comparison of "quick gaze" to ground truth human fixation/saliency maps. Nevertheless, I believe it will be interesting to explore.
 
 ## Abstract
-abc
+
 
 ## Methodology/Pipeline
 abc
