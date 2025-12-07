@@ -7,7 +7,8 @@ Large-scale receptive field to saliency correlation study
 1. Download the main notebook in the repository. Link provided here for ease: [Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
 2. Download backup.npy in results subfolder. Link provided here for ease: [backup](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/results/backup.npy)
 3. In the notebook, change save_path variable to where you downloaded to '/your_path/backup.npy
-4. In the notebook, set recovery_mode = True 
+4. In the notebook, set recovery_mode = True
+5. Run the entire notebook
 
 ### If you want to DO want to manually process all 5000 images from scratch:
 1. Download the main notebook in the repository. Link provided here for ease: [Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
@@ -18,11 +19,13 @@ Large-scale receptive field to saliency correlation study
   [Ground Truth Saliency Maps](https://drive.google.com/a/umn.edu/uc?id=1PnO7szbdub1559LfjYHMy65EDC4VhJC8&export=download)
 
 3. For images, extract entire val folder locally to a directory.
-4. In the notebook, change path_to_images variable in notebook to that directory.
-5. For ground truths, extract just the val folder locally to a directory. Change path_to_maps variable in notebook to that directory.
+4. In the notebook, change path_to_images variable to that directory.
+5. For ground truths, extract just the val folder locally to a directory.
+6. In the notebook, change path_to_maps variable to that directory.
+7. Run entire notebook
 
 ## Requirements
-See requirements.txt in repository, but notebook has a !pip section that will install the requirements and versions.
+See requirements.txt in repository if you want to use that, but notebook has a !pip section that will install the requirements and versions.
 
 ## Usage 
 Recommended way to recreate results file is to simply follow the first section of setup instructions above (uses backup.npy).
