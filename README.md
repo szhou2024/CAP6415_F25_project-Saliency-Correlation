@@ -29,7 +29,7 @@ See requirements.txt in repository if you want to use that, but notebook has a !
 
 ## Usage 
 Recommended way to recreate results file is to simply follow the first section of setup instructions above (uses backup.npy).
-If you want to recreate the entire process, follow the second section of setup instructions above.
+If you want to recreate the entire forward pass process, follow the second section of setup instructions above.
 After you're done setting up, simply run the entire notebook.
 
 ## Preface
