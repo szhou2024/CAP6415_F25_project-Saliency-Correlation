@@ -44,7 +44,8 @@ However, instead of a "Deep Gaze," I would like to explore a framework that can 
 abc
 
 ## Results
-abc
+For a more detailed look at the results, click below to navigate to it:
+[Click here to go to results](./results)
 
 ## Acknowledgements
 abc
