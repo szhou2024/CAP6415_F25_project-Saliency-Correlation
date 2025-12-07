@@ -13,7 +13,7 @@ Large-scale receptive field to saliency correlation study
 4. For ground truths, extract just the val folder locally to a directory. Change path_to_maps variable in notebook to that directory.
 
 ## Requirements
-See requirements.txt in repository, but you can also pip
+See requirements.txt in repository, but notebook has a !pip section that will install the requirements and versions.
 
 ## Usage 
 To run the entire 
