@@ -43,7 +43,7 @@ However, instead of a "Deep Gaze," I would like to explore a framework that can 
 ## Methodology/Pipeline
 This project produces saliency maps by combining FasterRCNN + FPNs with EigenCAM to generate saliency maps. Pipeline for image processing is below:
 
-Source Image → Input Tensor → FasterRCNN + FPN model → EigenCAM on all 5 FPN layers → Saliency Map
+**Source Image** → Input Tensor → FasterRCNN + FPN model → EigenCAM on all 5 FPN layers → **Saliency Map**
 
 The resulting saliency map is compared to ground truth human saliency maps on the same image. 
 
