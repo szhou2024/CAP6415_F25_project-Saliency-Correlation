@@ -64,7 +64,12 @@ For a more detailed look at the results, click below to navigate to it:
 
 [Click here to go to results](./results)
 
-TLDR: Results generally reflect model backbone training bias (imagenet datasets). Results also show that 
+To summarize:
+* Results generally reflect model backbone training bias (imagenet datasets)
+* Saliency maps on single object, non-occluded images tend to be highly correlated to ground truths.
+* Maps on high texture and multiple different object classes tend to be negatively correlated with ground truths.
+* The standard text bias is not present in CAMs, but is present in ground truths.
+* 
 
 ## Acknowledgements
 * Jacob Gil for his popular EigenCAM for YOLO5 notebook. Implementation of this project is based heavily this framework, with some adjustments. Link the notebook below:
