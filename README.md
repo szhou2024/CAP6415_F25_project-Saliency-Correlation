@@ -33,12 +33,14 @@ If you want to recreate the entire forward pass process, follow the second secti
 After you're done setting up, simply run the entire notebook.
 
 ## Preface
-abc
+Many SOTA models have come out to predict human fixation/saliency, including the ever popular DeepGaze models. These models combine image processing with fixation sequencing to come out with predictions that do quite a good job on benchmark datasets.
+
+However, instead of a "Deep Gaze," I would like to explore a framework that can similuate a "quick gaze" and compare saliency that way. There are inherent flaws in both methodology and comparison of "quick gaze" to ground truth human fixation/saliency maps.
 
 ## Abstract
 abc
 
-## Pipeline
+## Methodology/Pipeline
 abc
 
 ## Results
