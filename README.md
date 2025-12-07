@@ -39,12 +39,12 @@ Many SOTA models have come out to predict human fixation/saliency, including the
 However, instead of a "Deep Gaze," I would like to explore a framework that can similuate a "quick gaze" and compare saliency that way. There are inherent flaws in both methodology and comparison of "quick gaze" to ground truth human fixation/saliency maps. Nevertheless, I believe it will be interesting to explore.
 
 ## Abstract
-
+The goal of this project is to compare similarities and differences between CAM generated saliency maps versus SALICON human saliency maps. To represent the aforementioned "quick gaze," I decided to implement quick  
 
 ## Methodology/Pipeline
-This project produces saliency maps by combining FasterRCNN + FPNs with EigenCAM to generate saliency maps. Pipeline for image processing is below:
+As described above, this project produces saliency maps by combining FasterRCNN + FPNs with EigenCAM to generate saliency maps. Pipeline for image processing is below:
 
-**Source Image** → Input Tensor → FasterRCNN + FPN model → EigenCAM on all 5 FPN layers → **Saliency Map**
+**Source Image** → Input Tensor → FasterRCNN + FPN model → Extract FPN layers → EigenCAM on all 5 FPN layers → **Saliency Map**
 
 The resulting saliency map is compared to ground truth human saliency maps on the same image, and the metrics stored in a dictionary.
 
@@ -69,7 +69,7 @@ To summarize:
 * Saliency maps on single object, non-occluded images tend to be highly correlated to ground truths.
 * Maps on high texture and multiple different object classes tend to be negatively correlated with ground truths.
 * The standard text bias is not present in CAMs, but is present in ground truths.
-* 
+* Human bias is not 
 
 ## Acknowledgements
 * Jacob Gil for his popular EigenCAM for YOLO5 notebook. Implementation of this project is based heavily this framework, with some adjustments. Link the notebook below:
