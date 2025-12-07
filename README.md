@@ -82,7 +82,13 @@ To summarize:
 [https://github.com/jacobgil/pytorch-grad-cam/blob/master/pytorch_grad_cam/eigen_cam.py](https://github.com/jacobgil/pytorch-grad-cam/blob/master/pytorch_grad_cam/eigen_cam.py)
 
 ## References/Sources
-abc
+* Muhammad, M. B., & Yeasin, M. (2020). Eigen-CAM: Class Activation Map using Principal Components. arXiv. https://arxiv.org/abs/2008.00299
+
+* Simonyan, K., Vedaldi, A., & Zisserman, A. (2013). Deep inside convolutional networks: Visualising image classification models and saliency maps. arXiv. https://arxiv.org/abs/1312.6034
+
+* Li, X., Zhao, L., Wei, L., Yang, M.-H., Wu, F., Zhuang, Y., Ling, H., & Wang, J. (2015). DeepSaliency: Multi-Task Deep Neural Network Model for Salient Object Detection. arXiv. https://arxiv.org/abs/1506.01497
+
+* Girshick, R. (2015). Fast R-CNN. arXiv. https://arxiv.org/abs/1504.08083 
 
 ## License
 This project is purely for academic purposes as part of CAP6415 coursework requirement.
