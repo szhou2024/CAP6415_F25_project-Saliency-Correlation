@@ -23,3 +23,15 @@ Examples below:
 ![20th Highest](20.png)
 
 ![23rd Highest](23.png)
+
+## Task Alignment (Detecting Objects in Focus)
+Some images clearly delineate an object focus, which produces a background blurring effect. This is essentially similar to how humans focus on images, as objects that are clearly in focus tend to have higher saliency. This model, as well as many other CNN based models, thrive at detecting sensitivity to texture variance. In other words, when images have a natural sharpness to blur contrast (which happens when photographs/humans focus on something nearer in depth), models are able place high saliency on those borders where the contrast occurs.
+
+Examples below: 
+![Image 172995](../other_images/172995.png)
+
+![Image 550601](../other_images/550601.png)
+
+![Image 8333](../other_images/8333.png)
+
+
