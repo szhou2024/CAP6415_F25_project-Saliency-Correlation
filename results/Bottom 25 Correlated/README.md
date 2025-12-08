@@ -10,6 +10,19 @@ Examples below:
 ![15th Lowest](15.png)
 
 ![23rd Lowest](23.png)
+
+______
+______
+## Model + CAM Design
+
+
+Examples below:
+![Image](../other_images/354724_text.png)
+
+![Image](../other_images/19158_text.png)
+
+![Image](../other_images/328836_text.png)
+
 ______
 ______
 ## Text/Sign Bias
@@ -21,6 +34,7 @@ Examples below:
 ![Image](../other_images/19158_text.png)
 
 ![Image](../other_images/328836_text.png)
+
 ______
 ______
 ## Human Misalignment
