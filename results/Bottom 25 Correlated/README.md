@@ -13,8 +13,8 @@ Examples below:
 
 ______
 ______
-## Model + CAM Design
-
+## Model + EigenCAM Design
+While FPN layers contain feature maps that represent a wide range of spatial dimensions, the largest pitfall is the inability of EigenCAM to calculate feature maps of different dimensions, after flattening. 
 
 Examples below:
 ![Image](../other_images/354724_text.png)
