@@ -12,22 +12,16 @@ Examples below:
 ![23rd Lowest](23.png)
 ______
 ______
-## Scene Cluttering
-One of the key advantages of FPNs is better ability to process distant scenes. In particular, the model can combine "big picture" scenes with large number of objects detected in the background because the receptive field is a combination of various spatial sizes, from fine to coarse. Since the default downsamples all FPN layers to 8x10 spatial regions, the receptive field is huge (albeit blurry). Nevertheless, the model can still delineate the contrast between background and salient foreground.
-
-Objects that are similar but larger have greater saliency. This is apparent in the image of the tanker and cars at a distant overhead angle. To declutter the scene, this combination of FPN layers detect similar objects (cars, tankers), but places heavy emphasis on the larger object due to larger contrast. This tracks with the architecture of the model, where the 8x10 pool dimensions dominate.
+## Text/Sign Bias
+Humans tend to automatically fixate on readable text (signs, labels, billboards) due to learned reading behavior. The model is likely trained without a text object category. Thus, features do not learn text specific patterns because there is a likely a lack of gradient signal. The result is minimal activation in these textual regions. This cultural/task-specific bias suggests that text is a notable source of misalignment. It is apparent that bottom-up saliency models that humans implicitly follow and task-specific detection models, such as FasterRCNN + FPN, capture fundamentally different aspects of visual attention.
 
 Examples below:
-![20th Highest](20.png)
+![Image](../other_images/354724_text.png)
 
-![23rd Highest](23.png)
+![Image](../other_images/19158_text.png)
 
-## Task Alignment (Detecting Objects in Focus)
-Some images clearly delineate an object focus, which produces a background blurring effect. This is essentially similar to how humans focus on images, as objects that are clearly in focus tend to have higher saliency. This model, as well as many other CNN based models, thrive at detecting sensitivity to texture variance. In other words, when images have a natural sharpness to blur contrast (which happens when photographs/humans focus on something nearer in depth), models are able place high saliency on those borders where the contrast occurs.
-
-Examples below: 
-![Image 172995](../other_images/172995.png)
-
-![Image 550601](../other_images/550601.png)
-
-![Image 8333](../other_images/8333.png)
+![Image](../other_images/328836_text.png)
+______
+______
+## Human Bias
+Humans are naturally
