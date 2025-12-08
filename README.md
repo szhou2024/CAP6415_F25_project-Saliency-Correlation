@@ -15,6 +15,10 @@ You MUST download the two SALICON datasets. First link below is the original ima
 **Corresponding Heat Maps:**
 [Ground Truth Saliency Maps](https://drive.usercontent.google.com/download?id=1YWiwRNHokV2TIUBsNhAeRo1aqz8Iq0In&export=download&authuser=0)
 
+For input images, extract the val folder into directory. Make note of this directory path.
+
+For downloaded ground truths, make sure you **only extract val** folder and NOT training. Make note of this directory path.
+
 ### (Recommended) Using Git:
 1. Download the repository using:
    `git clone https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation-Study.git`
@@ -22,26 +26,31 @@ You MUST download the two SALICON datasets. First link below is the original ima
    `cd CAP6415_F25_project-Saliency-Correlation-Study`
 3. Make note of download path (can check using pwd). This is the **your_path** used in step 5
 4. Open the EigenCAM_on_fastRCNN.ipynb notebook using whichever method you wish (Jupyter, VSC, Colab etc)
-5. In the notebook, change **save_path** variable to '**.../your_path**/results/backup.npy'
-6. In the notebook, make sure to set **recovery_mode** = True (should be default)
-7. Run the entire notebook
+5. In the notebook:
+   * Change **path_to_images** variable to the directory of input images you saved to from PREREQUISITE section (i.e **.../your_path**/source_images/val)
+   * Change **path_to_maps** variable to the directory of ground truth maps you saved to from PREREQUISITE section (i.e **.../your_path**/ground_truth/val)
+   * Change **save_path** variable to '**.../your_path**/results/backup.npy'
+   * Make sure to set **recovery_mode** = True (should be default)
+6. Run the entire notebook
 
 ### Manually, if you DON'T want to process all 5000 images from scratch :
 1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
 2. Download backup.npy in results subfolder. Link provided here for ease: [⬇️backup](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/results/backup.npy)
-3. In the notebook, change **save_path** variable to where you downloaded to '**.../your_path**/backup.npy'
-4. In the notebook, set **recovery_mode** = True
-5. Run the entire notebook
+3. In the notebook:
+   * Change **path_to_images** variable to the directory of input images you saved to from PREREQUISITE section (i.e **.../your_path**/source_images/val)
+   * Change **path_to_maps** variable to the directory of ground truth maps you saved to from PREREQUISITE section (i.e **.../your_path**/ground_truth/val)
+   * Change **save_path** variable to '**.../your_path**/results/backup.npy'
+   * Make sure to set **recovery_mode** = True (should be default)
+4. Run the entire notebook
 
-### Manually, if you DO want to manually process all 5000 images from scratch:
+### Manually, if you DO want to process all 5000 images from scratch:
 1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
-
-2. For Images, extract entire val folder locally to a directory.
-3. In the notebook, change **path_to_images** variable to that directory.
-4. For Ground Truths, extract just the val folder locally to a directory.
-5. In the notebook, change **path_to_maps** variable to that directory.
-6. In the notebook, set **recovery_mode** = False
-7. Run entire notebook
+2. In the notebook:
+   * Change **path_to_images** variable to the directory of input images you saved to from PREREQUISITE section (i.e **.../your_path**/source_images/val)
+   * Change **path_to_maps** variable to the directory of ground truth maps you saved to from PREREQUISITE section (i.e **.../your_path**/ground_truth/val)
+   * Change **save_path** variable to '**.../your_path**/results/backup.npy'
+   * Make sure to set **recovery_mode** = False
+3. Run entire notebook
 ______
 ______
 ## Requirements
