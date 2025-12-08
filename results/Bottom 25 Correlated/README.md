@@ -23,5 +23,16 @@ Examples below:
 ![Image](../other_images/328836_text.png)
 ______
 ______
-## Human Bias
-Humans are naturally
+## Human Misalignment
+While both models and humans exhibit saliency towards human objects, there are multiple reasons for misalignment in saliency. As in the first image below, the model likely places much larger emphasis on high probability objects like skis, while clothing and glasses obfuscate the detection of human objects. By contrast, human fixation directly focuses on faces of the humans, thus displaying a misalignment due to human bias.
+
+Even in human-centric images, the model's learned context outweighs human object recognition in activations. As seen in the second image below, the background scene and appliance context outweighs the person in the image, whereas human fixation is directed to the human in the image. Furthermore, as seen in the third image below, the model fixates solely on the human's bent leg, suggesting that it places emphasis on pose and orientation of a human rather than facial fixation seen across ground truth saliency maps.
+
+Examples below:
+![Image](../other_images/104091_human.png)
+
+![Image](../other_images/567636_human.png)
+
+![Image](../other_images/326086_human.png)
+
+
