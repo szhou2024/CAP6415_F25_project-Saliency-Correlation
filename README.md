@@ -35,7 +35,8 @@ For all with ⬇️ download image, you can just right click save as link for ea
 4. In the notebook, change **path_to_images** variable to that directory.
 5. For Ground Truths, extract just the val folder locally to a directory.
 6. In the notebook, change **path_to_maps** variable to that directory.
-7. Run entire notebook
+7. In the notebook, set **recovery_mode** = False
+8. Run entire notebook
 ______
 ______
 ## Requirements
@@ -44,8 +45,9 @@ See requirements.txt in repository if you want to use that, but notebook has a !
 ______
 ______
 ## Usage 
-Recommended way to recreate results file is to simply follow the first section of setup instructions above (uses backup.npy).
-If you want to recreate the entire forward pass process, follow the second section of setup instructions above.
+Recommended way is to use Git to download the repository, then to recreate results by following the first section of setup instructions above (uses backup.npy).
+If you just want to download the necessary files (but not results images), follow the second method of setup instructions above.
+If you want to recreate the entire forward pass process, follow the last method of setup instructions above.
 After you're done setting up, simply run the entire notebook.
 
 ## Preface
