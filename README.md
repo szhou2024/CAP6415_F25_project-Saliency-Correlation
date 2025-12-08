@@ -55,7 +55,9 @@ As described above, this project produces saliency maps by combining FasterRCNN 
 
 **Source Image** → Input Tensor → FasterRCNN + FPN model → Extract FPN layers → EigenCAM on all 5 FPN layers → **Saliency Map**
 
-The source image dimensions are **480x640** and each FPN layer has **256 channels** of spatial dimensions, ranging from finest (4x downsampling to 120x160) to most coarse (64x downsampling to 8x10). The resulting saliency map is compared to ground truth human saliency maps on the same image, and the metrics stored in a dictionary.
+The source image dimensions are **480x640** and each FPN layer has **256 channels** of spatial dimensions, ranging from finest (4x downsampling to 120x160) to most coarse (64x downsampling to 8x10). The resulting saliency map is compared to ground truth human saliency maps on the same image, and the metrics stored in a dictionary. 
+
+An important thing to note is that the "EigenCAM on all 5 FPN layers" step in the pipeline requires a massive workaround. In order for EigenCAM to calculate PCA, it expects uniformly shaped tensors. As such, I follow Jacob Gil's methodology and flatten all five layers into one, then resize to same lowest layer dimension (pool layer of 8x10 in this case). The resulting tensor is shape = (1, 1280, 8, 10) and EigenCAM produces a corresponding square matrix for singular value decomposition (SVD) processing. This workaround leads to some inevitable pitfalls, which I will discuss in results section. [Click here to see more about this](./results/Bottom%2025%20Correlated#model--eigencam-design) 
 
 Some notable things:
 * Normally, with grad-cam library, you would pass a list of layers to hook onto and produce averaged CAMs across the layers. Unfortunately, FPNs are not easy to hook in PyTorch, so the workaround is the following:
