@@ -70,20 +70,22 @@ Some notable things:
 ______
 ______
 ## Results
-For a more detailed look at the results, click below to navigate to it:
+Top 25 most and least correlated CAM generated maps are provided. Additionally, I conduct a depeer dive and take a more detailed look into larger spatial dimensions for the top 25 least correlated images. 
+
+For a more detailed look at the results including image outputs, click below to navigate to it:
 
 [Click here to go to results](./results)
 
 To summarize:
-* Results generally reflect model backbone training bias (imagenet datasets)
+* Results generally reflect model backbone training bias (ImageNet datasets)
 * Saliency maps on single object, non-occluded images tend to be highly correlated to ground truths.
-* Maps on high texture and multiple different object classes tend to be negatively correlated with ground truths.
+* Maps on high texture and multiple different object classes tend to be very negatively correlated with ground truths.
 * The standard text bias is not present in CAMs, but is present in ground truths.
-* Human bias is not 
+* Human bias (particularly human faces) is particularly evident in ground truths (as expected), but not really the case in CAMs. Interestingly, in cat and dog images, both human and CAM show a bias towards faces.
 ______
 ______
 ## Acknowledgements
-* Jacob Gil for his popular EigenCAM for YOLO5 notebook. Implementation of this project is based heavily this framework, with some adjustments. Link the notebook below:
+* Jacob Gil for his popular tutorial on CAM for object detection with FasterRCNN. Implementation of this project is based heavily this framework, with some adjustments. Link the notebook below:
 
 [https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/EigenCAM%20for%20YOLO5.ipynb)](https://github.com/jacobgil/pytorch-grad-cam/blob/master/tutorials/Class%20Activation%20Maps%20for%20Object%20Detection%20With%20Faster%20RCNN.ipynb)
 
