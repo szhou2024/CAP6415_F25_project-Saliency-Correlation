@@ -14,5 +14,8 @@ Examples below:
 ![17th Highest](17.png)
 ______
 ______
-## Symmetry
-The most dominant objects by far are dogs and cats. This pretty much suggests model bias, as the model is likely trained on many instances of cats and dogs. More importantly, some representation of combination of features in FPN layers is very dominant (many of these high correlation images have 15 to 20% explained variance through the top component).
+## Scene Cluttering
+One of the key advantages of FPNs is better ability to process distant scenes. In particular, the model can combine "big picture" scenes with large number of objects detected in the background because the receptive field is a combination of various spatial sizes, from fine to coarse. Since the default downsamples all FPN layers to 8x10 spatial regions, the receptive field is huge (albeit blurry). Nevertheless, the model can still delineate the contrast between background and salient foreground.
+
+Examples below:
+![20th Highest](20.png)
