@@ -9,7 +9,7 @@ For all with ⬇️ download image, you can just right click save as link for ea
 1. Download the repository using:
    `git clone https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation-Study.git`
 2. Change directory using:
-   cd CAP6415_F25_project-Saliency-Correlation-Study
+   `cd CAP6415_F25_project-Saliency-Correlation-Study`
 3. Make note of download path (can check using pwd). This is the **your_path** used in step 5
 4. Open the EigenCAM_on_fastRCNN.ipynb notebook using whichever method you wish (Jupyter, VSC, Colab etc)
 5. In the notebook, change **save_path** variable to '**.../your_path**/results/backup.npy'
