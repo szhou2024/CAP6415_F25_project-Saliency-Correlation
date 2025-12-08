@@ -13,4 +13,4 @@
 2. [Differences](./Bottom%2025%20Correlated#differences)
 
 ##### For an explanation of what I did to explore more into Bottom 25 correlations, click below:
-[Explanations](./Deep%20Dive%20on%20Bottom%2025#explanation)
+[Explanations](./Deep%20Dive%20on%20Bottom%2025#explanations)
