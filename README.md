@@ -65,8 +65,9 @@ Some notable things:
    * Conduct PCA as EigenCAM would on all channels in this layer
      
 * The model itself (FasterRCNN + FPNs) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as I am simply using the backbone and not propogating the model forward past FPNs
+* The model uses pretrained weights, which is something to address in future improvements. Thus, it will have training bias on the images it has been trained on. However, FasterCNN + FPN trains (pre-trained weights) are trained on the same COCO dataset which SALICON images are derived from.
 * Ground truth saliency maps apply a gaussian blur of σ~19. I do the same to initial EigenCAM output, and in the notebook, it will be referred to as "smoothed CAM"
-* Standard correlation metric (used in papers/benchmarks) inflate correlation because 0's are being processed as not null values, but 0's itself. This renders intersection masking that standard libraries have useless. Instead, I apply a cc_mask, which is correlation based on union mask, but 0's are counted as nulls instead of 0.
+* Standard correlation metric (used in papers/benchmarks) inflate correlation because 0's are being processed as not null values, but 0's itself. This renders intersection masking that standard libraries have useless. Instead, I apply a cc_mask, which is correlation based on union mask, but 0's are counted as nulls instead of 0
 ______
 ______
 ## Results
@@ -81,7 +82,7 @@ To summarize:
 * Saliency maps on single object, non-occluded images tend to be highly correlated to ground truths.
 * Maps on high texture and multiple different object classes tend to be very negatively correlated with ground truths.
 * The standard text bias is not present in CAMs, but is present in ground truths.
-* Human bias (particularly human faces) is particularly evident in ground truths (as expected), but not really the case in CAMs. Interestingly, in cat and dog images, both human and CAM show a bias towards faces.
+* Human bias (particularly human faces) is particularly evident in ground truths (as expected), but not really the case in CAMs. Interestingly, in cat and dog images, both human and CAM show a bias towards faces, suggesting model training bias.
 ______
 ______
 ## Acknowledgements
