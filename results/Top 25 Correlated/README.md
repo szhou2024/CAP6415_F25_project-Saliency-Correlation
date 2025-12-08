@@ -9,7 +9,7 @@ But FasterRCNN + FPN are trained on the same images as SALICON dataset (COCO ima
 Examples below:
 ![2nd Highest](02.png)
 
-![9nd Highest](09.png)
+![7nd Highest](07.png)
 
 ![17th Highest](17.png)
 ______
