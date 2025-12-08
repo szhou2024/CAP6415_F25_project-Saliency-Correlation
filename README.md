@@ -5,6 +5,16 @@ ______
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
 For all with ⬇️ download image, you can just right click save as link for ease. Otherwise, just click to be directed to that link. There are 3 ways to reproduce the results. The first two ways do not process the 5000 images, and use the results I have provided via backup.npy. If you wish to fully reproduce, follow the instructions of the last method.
 
+**PREQUISITE**
+
+You MUST download the two SALICON datasets. First link below is the original images in SALICON validation set. Second link is the corresponding ground truth maps:
+
+**Input Images:**
+[⬇️SALICON Source Images](https://s3.amazonaws.com/salicon-dataset/2015r1/val.zip)
+
+**Corresponding Heat Maps:**
+[Ground Truth Saliency Maps](https://drive.usercontent.google.com/download?id=1YWiwRNHokV2TIUBsNhAeRo1aqz8Iq0In&export=download&authuser=0)
+
 ### (Recommended) Using Git:
 1. Download the repository using:
    `git clone https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation-Study.git`
@@ -25,18 +35,13 @@ For all with ⬇️ download image, you can just right click save as link for ea
 
 ### Manually, if you DO want to manually process all 5000 images from scratch:
 1. Download the main notebook in the repository. Link provided here for ease: [⬇️Main Notebook](https://github.com/szhou2024/CAP6415_F25_project-Saliency-Correlation/blob/main/EigenCAM_on_fastRCNN.ipynb)
-2. Download the two datasets. First link below is the original images in SALICON validation set. Second link is the ground truth maps
-   
-  [⬇️SALICON Source Images](https://s3.amazonaws.com/salicon-dataset/2015r1/val.zip)
 
-  [Ground Truth Saliency Maps](https://drive.usercontent.google.com/download?id=1YWiwRNHokV2TIUBsNhAeRo1aqz8Iq0In&export=download&authuser=0)
-
-3. For Images, extract entire val folder locally to a directory.
-4. In the notebook, change **path_to_images** variable to that directory.
-5. For Ground Truths, extract just the val folder locally to a directory.
-6. In the notebook, change **path_to_maps** variable to that directory.
-7. In the notebook, set **recovery_mode** = False
-8. Run entire notebook
+2. For Images, extract entire val folder locally to a directory.
+3. In the notebook, change **path_to_images** variable to that directory.
+4. For Ground Truths, extract just the val folder locally to a directory.
+5. In the notebook, change **path_to_maps** variable to that directory.
+6. In the notebook, set **recovery_mode** = False
+7. Run entire notebook
 ______
 ______
 ## Requirements
