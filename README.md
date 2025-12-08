@@ -3,7 +3,7 @@ Large-scale receptive field to saliency correlation study. [Click here to go to 
 ______
 ______
 ## Setup Instructions (PLEASE FOLLOW SEQUENTIALLY)
-For all with ⬇️ download image, you can just right click save as link for ease. Otherwise, just click to be directed to that link.
+For all with ⬇️ download image, you can just right click save as link for ease. Otherwise, just click to be directed to that link. There are 3 ways to reproduce the results. The first two ways do not process the 5000 images, and use the results I have provided via backup.npy. If you wish to fully reproduce, follow the instructions of the last method.
 
 ### (Recommended) Using Git:
 1. Download the repository using:
