@@ -43,7 +43,11 @@ However, instead of a "Deep Gaze," I would like to explore a framework that can 
 ______
 ______
 ## Abstract
-The goal of this project is to compare similarities and differences between CAM generated saliency maps versus SALICON human saliency maps. To represent the aforementioned "quick gaze," I decided to implement quick  
+The goal of this project is to compare similarities and differences between CAM generated saliency maps versus SALICON human saliency maps. To represent the aforementioned "quick gaze," I decided to implement FasterRCNN + FPNs as the model to process image, and EigenCAM to create a final saliency map.
+
+In a nutshell, the model uses ResNet50 backbone for feature extraction, and then a Feature Pyramid Network (FPN) that produces representations at multiple spatial resolutions. Like an encoder, the FPN represents 'latent representations' that encode what the model has learned about the image at different zoom levels. This would be similar to how human eyes can focus on fine details or see the big picture. The hallmark of FPNs is the ability to capture both fine-grained spatial details (early layers) and high-level semantic information (deep layers).
+
+EigenCAM is a gradient-free method of generating class activation maps (CAMs). Unlike gradient-based CAM methods, EigenCAMs only require forward pass, do not require backpropagation, and do not require class-specific information. EigenCAMs, as the name suggests, perform PCA on the feature maps of a model to identify the most salient spatial regions for the model's predictions. Since the feature maps in this project are the channels of FPN layers, it reduces all the channels to a single spatial heatmap by computing a weighted linear combination of the most dominant activations across all scales. In a nutshell, EigenCAM on FPNs abstractly represents a "blurry impression" saliency map.
 ______
 ______
 ## Methodology/Pipeline
@@ -51,13 +55,13 @@ As described above, this project produces saliency maps by combining FasterRCNN 
 
 **Source Image** → Input Tensor → FasterRCNN + FPN model → Extract FPN layers → EigenCAM on all 5 FPN layers → **Saliency Map**
 
-The resulting saliency map is compared to ground truth human saliency maps on the same image, and the metrics stored in a dictionary.
+The source image dimensions are **480x640** and each FPN layer has **256 channels** of spatial dimensions, ranging from finest (4x downsampling to 120x160) to most coarse (64x downsampling to 8x10). The resulting saliency map is compared to ground truth human saliency maps on the same image, and the metrics stored in a dictionary.
 
 Some notable things:
 * Normally, with grad-cam library, you would pass a list of layers to hook onto and produce averaged CAMs across the layers. Unfortunately, FPNs are not easy to hook in PyTorch, so the workaround is the following:
   
    * Flatten all 5 FPN layers into 1 giant "layer"
-   * Resize all spatial dimensions to match (default using fasterrcnn_reshape_transform is pool layer dimensions)
+   * Resize all spatial dimensions of FPN layers to match (default using fasterrcnn_reshape_transform is pool layer dimensions)
    * Conduct PCA as EigenCAM would on all channels in this layer
      
 * The model itself (FasterRCNN + FPNs) is designed to create FPNs for the purpose of object detection. However, this should not matter much, as I am simply using the backbone and not propogating the model forward past FPNs
