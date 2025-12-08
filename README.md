@@ -69,6 +69,7 @@ Recommended way is to use Git to download the repository, then to recreate resul
 If you just want to download the necessary files (but not results images), follow the second method of setup instructions above.
 If you want to recreate the entire forward pass process, follow the last method of setup instructions above.
 After you're done setting up, simply run the entire notebook.
+You MUST download the SALICON validation dataset and corresponding ground truths before doing anything.
 
 ## Preface
 Many SOTA models have come out to predict human fixation/saliency, including the ever popular DeepGaze models. These models combine image processing with fixation sequencing to come out with predictions that do quite a good job on benchmark datasets.
