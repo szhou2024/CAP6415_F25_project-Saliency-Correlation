@@ -14,7 +14,11 @@ Examples below:
 ______
 ______
 ## Model + EigenCAM Design
-While FPN layers contain feature maps that represent a wide range of spatial dimensions, the largest pitfall is the inability of EigenCAM to calculate feature maps of different dimensions, after flattening. 
+While FPN layers contain feature maps that represent a wide range of spatial dimensions, the largest pitfall is the inability of EigenCAM to calculate feature maps of different dimensions after flattening and reshaping. Additionally, it is virtually impossible to perform traditional SVD to get PCs on layer 1 spatial dimensions (120x160). It takes about 19200 x 19200 ~ 369 million bits or 1.47 GB of RAM just to initialize the square matrix. Add in intermediate matrices, and it easily surpasses 10 GB of RAM used.
+
+Reshaping all 1280 channels to a singular dimension introduces another challenge. If the dimensions are reshaped to lowest spatial size by default (pool layer 8x10), this is akin to **heavily** blurring finer spatial layers like layer 1's 120x160, as well as the other intermediate layers. This likely causes too much information loss in learned feature maps of larger spatial dimensions, and the expected result is that textures and other detailed patterns become too distorted to activate. The advantage of this is greater computational and memory efficiency.
+
+On the other hand, as mentioned earlier, it is impossible to upsample all layers to 120x160, nor does it make sense because no new information is gained (would simply hook FPN layer 1 instead). A better compromise is layer 3 and/or 4, which have higher spatial dimensions, but still allow EigenCAM to run reasonably fast. I do this in the Deep Dive on Bottom 25 section. 
 
 Examples below:
 ![Image](../other_images/354724_text.png)
